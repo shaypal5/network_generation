@@ -8,6 +8,8 @@ import it.unimi.dsi.fastutil.ints.IntOpenHashSet;
 import it.unimi.dsi.fastutil.ints.IntSet;
 
 /**
+ * A matrix-based implementation of the WeightedNetwork interface. The getSparseEdgeWeights() and 
+ * getNeighborIndices() methotake time linear in the number of nodes.
  * @author ShayPalachy
  */
 public class MatrixBasedWeightedNetwork implements WeightedNetwork {
