@@ -133,8 +133,10 @@ public class NeighborListBasedWeightedNetwork implements WeightedNetwork {
    @Override
    public double[] getDenseEdgeWeights(int nodeIndex) {
       double[] weightsArray = new double[numOfNodes];
-      for (int index : neighborLists[nodeIndex].keySet()){
-         weightsArray[index] = neighborLists[nodeIndex].get(index);
+      if (neighborLists[nodeIndex] != null){         
+         for (int index : neighborLists[nodeIndex].keySet()){
+            weightsArray[index] = neighborLists[nodeIndex].get(index);
+         }
       }
       return weightsArray;
    }
