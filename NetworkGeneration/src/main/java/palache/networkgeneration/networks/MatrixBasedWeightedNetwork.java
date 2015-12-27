@@ -19,7 +19,12 @@ public class MatrixBasedWeightedNetwork implements WeightedNetwork {
 
    /*----=  Constructors  =-----*/
    
-   MatrixBasedWeightedNetwork(int numOfNodes, double[][] edgeWeights){
+   /**
+    * Creates a network with the given number of nodes and based on the given edge matrix.
+    * @param numOfNodes
+    * @param edgeWeights
+    */
+   public MatrixBasedWeightedNetwork(int numOfNodes, double[][] edgeWeights){
       if (edgeWeights.length != numOfNodes){
          throw new IllegalArgumentException("The first dimension of of the edge weights matrix must be "
                + "identical to the number of nodes in the instantiated network.");
